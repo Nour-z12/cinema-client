@@ -2,43 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
     <title>signup</title>
-    <link rel="stylesheet" href="../styles/singup.css">
+    <link rel="stylesheet" href="../styles/signup.css">
 </head>
 <body>
-    <div id="logo">Cinema <span>Hub</span></div>
+    <div class="logo">Cinema <span>Hub</span></div>
 
-        <h2 id="welcome">Signup for an unforgettable experience</h2>
-    <div id="signup_card">
-        <div id="container">
+        <h2 class="welcome">Signup for an unforgettable experience</h2>
+    <div class="signup_card">
+        <div class="container">
+            <form id="myForm">
         <label for="">Name:
             <br></br>
-             <input type="text" name="name" id="username" placeholder="enter your name" > 
+             <input type="text" name="name" class="username" id="username" placeholder="enter your name"  > 
         </label>
         <label for="">Email:
             <br></br>
-             <input type="email" name="email" id="email" placeholder="enter your email"> 
+             <input type="email" name="email" class="email" id="email" placeholder="enter your email"> 
         </label>
         <label for=""> Mobile number:
             <br></br>
-             <input type="tel" name="mobile" id="mobile" placeholder="enter your mobile number">
+             <input type="tel" name="mobile" class="mobile" id="mobile" placeholder="enter your mobile number">
         </label>
         <label for="">Password:
             <br></br>
-             <input type="password" name="password_hash" id="password_hash" placeholder="enter your password"> 
+             <input type="password" name="password_hash" class="password_hash" id="password_hash" placeholder="enter your password"> 
         </label>
 
-             <input type="submit" value="Signin" id="submit-btn">
-             <button class="google-btn">
-                <img src="../assets/google-icon.png" alt="Google icon"> Sign in with Google
+             <input type="submit" value="Signup" class="submit-btn" id="submit-btn">
+             <button class="google-btn" id="google-btn">
+                <img src="../assets/google-icon.png" alt="Google icon"> Signup with Google
             </button>
-            <button class="facebook-btn">
-                <img src="../assets/facebook-icon.png" alt="Facebook icon"> Sign in with Facebook
+            <button class="facebook-btn" id="facebook-btn">
+                <img src="../assets/facebook-icon.png" alt="Facebook icon"> Signup with Facebook
             </button>
+            </form>
         </div>
        
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../scripts/signup.js"></script>
     
 </body>
 </html>
