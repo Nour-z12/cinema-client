@@ -15,6 +15,9 @@ document.getElementById('myForm').addEventListener('submit', async function (e) 
             password_hash: password_hash
         });
         console.log(response.data);
+        if(response===200){
+            window.location.href='../index.html'
+        }
     } catch (error) {
         console.error(error);
     }
