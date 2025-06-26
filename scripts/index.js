@@ -1,34 +1,10 @@
 
 
-
-document.getElementById('myForm').addEventListener('submit', async function (e) {
+    document.getElementById('submit-btn').addEventListener('click', async function (e) {
     e.preventDefault();
-    const input = document.getElementById('email').value;
-    const password_hash = document.getElementById('password_hash').value;
-     function isEmail(input) {
-  
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(input);
-  }
-  if (isEmail(input)== true){
-    try {
-        const response = await axios.post('http://localhost/cinema-server/controllers/authenticator.php', {
-           
-            email: input,
-            mobile: null,
-            password_hash: password_hash
-        });
-       
-        console.log(response.entry);
-    } 
 
-    
-    catch (error) {
-        console.error(error);
-    }
-}}
-);document.getElementById('myForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
+    console.log("Hello")
+
     const input = document.getElementById('email').value;
     const password_hash = document.getElementById('password_hash').value;
 
@@ -46,17 +22,19 @@ document.getElementById('myForm').addEventListener('submit', async function (e) 
         mobile = input;
     }
 
+
     try {
-        const response = await axios.post('http://localhost/cinema-server/controllers/authenticator.php', {
+        const response = await axios.post('http://localhost/cinema-server/controllers/login.php', {
             email: email,
             mobile: mobile,
             password_hash: password_hash
         });
         console.log(response.data);
-         if(response===200){
-            window.location.href='../pages/home.html'
+         
+         if(response.status===200){
+            window.location.href='../cinima-client/pages/home.html'
         } 
     } catch (error) {
         console.error(error);
-    }
+    }   
 });
