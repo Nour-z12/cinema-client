@@ -14,7 +14,7 @@ document.getElementById('myForm').addEventListener('submit', async function (e) 
             mobile: mobile,
             password_hash: password_hash
         });
-        console.log(response.entry);
+        console.log(response.data);
     } catch (error) {
         console.error(error);
     }
