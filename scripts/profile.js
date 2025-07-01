@@ -43,7 +43,7 @@ document.getElementById('save').addEventListener('click', async () => {
     console.log('Update successful:', response.data);
     alert("Update successful!");
 
-    // Optionally update localStorage with new values
+    
     if (updateData.name) localStorage.setItem('name', updateData.name);
     if (updateData.email) localStorage.setItem('email', updateData.email);
     if (updateData.mobile) localStorage.setItem('mobile', updateData.mobile);
