@@ -1,0 +1,209 @@
+
+ .logo {
+  position: fixed;
+  top: 0.4%;
+  left: 0%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+  z-index: 101;
+  width: 200px;
+  left: 0;
+  border-radius: 0 0 8px 0;
+  text-align: left;
+  padding-left: 1.2rem;
+} 
+
+.logo span {
+  color: #ff4b2b;
+}
+.nav-links {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 200px; 
+    height: calc(100% - 60px); 
+    background-color: #ff4b2b;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2rem;
+    gap: 1.5rem; 
+    z-index: 100;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+    margin-left: 1rem;
+}
+
+.nav-links a:hover {
+    background: rgba(255,255,255,0.15);
+    color: #222;
+}
+.nav-link-menu {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 102;
+    background: #ff4b2b;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.nav{
+    position: sticky;
+    display: flex;
+    width: 25%;
+    height: 100%;
+}
+body{
+    background-color: black;
+    
+}
+
+
+ 
+
+.nav-link-menu {
+    align-self: stretch;
+    margin: 1rem 0;
+    display: none;
+    top: 4.5rem;
+}
+.form-sec {
+  margin-left: 220px;
+  padding: 2rem;
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212; 
+}
+
+.form-section {
+  background: #1f1f1f;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 75, 43, 0.4);
+  width: 100%;
+  max-width: 420px;
+  color: white;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.form-section label span {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.form-section input,
+.form-section select {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #333;
+  color: white;
+}
+
+.form-section button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #ff4b2b;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+  background-color: #e03e20;
+}
+.form-section button a{
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1rem 0 1rem 1rem;
+        gap: 1.2rem;
+        left: 0;
+        top: 60px; 
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-link-menu {
+        display: block;
+    }
+    .logo {
+        width: 100vw;
+        border-radius: 0 0 8px 0;
+    }
+     .nav-links.active a:first-child {
+        margin-top: 2.5rem;
+    }
+    .nav-links a {
+        margin-left: 0;
+        padding: 0.7rem 0.8rem;
+    }
+} 
+
+
+
+
+@media (max-width: 700px) {
+  .form-sec {
+    margin-left: 0;
+    padding: 1.5rem;
+  }
+  .form-section {
+    padding: 1.5rem 2rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+    .form-sec {
+        margin-top: 24%;
+        
+    }
+  
+
+}
