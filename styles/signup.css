@@ -177,6 +177,15 @@ input {
     width: 18px;
     height: 18px;
 }
+.login-link{
+    text-align: center;
+    color: white;
+}
+.login-link a{
+    color: red;
+    text-decoration: none;
+    
+}
 
 
 @media (max-width: 600px) {
