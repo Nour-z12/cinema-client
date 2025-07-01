@@ -166,6 +166,18 @@ input {
     width: 18px;
     height: 18px;
 }
+.signup-link{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+
+}
+.signup-link a{
+    text-decoration: none;
+    color: #d42e1c;
+    text-align: center;
+}
+
 
 
 @media (max-width: 400px) {

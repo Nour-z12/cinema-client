@@ -8,7 +8,7 @@ document.getElementById('myForm').addEventListener('submit', async function (e) 
     const mobile = document.getElementById('mobile').value;
     const password_hash = document.getElementById('password_hash').value;
     try {
-        const response = await axios.post('http://localhost/cinema-server/controllers/authenticator.php', {
+        const response = await axios.post('http://localhost/cenema-server/controllers/authenticator.php', {
             name: username,
             email: email,
             mobile: mobile,
@@ -17,6 +17,10 @@ document.getElementById('myForm').addEventListener('submit', async function (e) 
         console.log(response.data);
         if(response.status===200){
             window.location.href='../index.html'
+            localStorage.setItem('mobile', mobile)
+        }
+        else if(response.status=== 401){
+            alert("email or password incorrect");
         }
     } catch (error) {
         console.error(error);

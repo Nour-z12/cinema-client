@@ -24,7 +24,7 @@
 
 
     try {
-        const response = await axios.post('http://localhost/cinema-server/controllers/login.php', {
+        const response = await axios.post('http://localhost/cenema-server/controllers/login.php', {
             email: email,
             mobile: mobile,
             password_hash: password_hash
@@ -32,8 +32,19 @@
         console.log(response.data);
          
          if(response.status===200){
+            localStorage.setItem('id', response.data.user_data.id)
+            localStorage.setItem('name', response.data.user_data.name)
+            localStorage.setItem('email', input)
+        
+
+
+
+
             window.location.href='../cinima-client/pages/home.html'
         } 
+        else if(response.status=== 400){
+            alert("Invalid email or pass");
+        }
     } catch (error) {
         console.error(error);
     }   
